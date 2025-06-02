@@ -1,22 +1,31 @@
 # installing `guake` from source
+
 [online documentation](https://guake.readthedocs.io/en/latest/user/installing.html#install-from-source)
 
-Try running this command to enable extra repositories for RHEL 10:
-```bash
-sudo subscription-manager repos --enable codeready-builder-for-rhel-10-x86_64-rpms
-```
+<hr />
+
+> Note: I highly recommend following the instructions in [_enabling-extra-packages.md](_enabling-extra-packages.md) as they make getting dependencies easier.
+
+<hr />
 
 1. Clone the repository at [https://github.com/Guake/guake.git](https://github.com/Guake/guake.git).
+
 ```bash
 git clone https://github.com/Guake/guake.git
 ```
+
 2. `cd` into the directory that you cloned the repository into.
+
 3. To install dependencies, try to run this command:
+
 ```bash
 ./scripts/bootstrap-dev-fedora.sh run make
 ```
-> There is also a `debian` and an `arch` sh file that you can use as opposed to `fedora`.
+
+> There is also a `debian` and an `arch` shellscript file that you can use as opposed to `fedora`.
+
 4. Run `make`:
+
 ```bash
 make
 sudo make install
@@ -81,5 +90,8 @@ Then, run `sudo make install`:
 sudo make install
 ```
 
+<hr />
+
+See the [online documentation](https://guake.readthedocs.io/en/latest/user/installing.html#install-from-source) for further instructions.
 
 

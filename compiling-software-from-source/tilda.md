@@ -1,9 +1,12 @@
 # `tilda` compile instructions
 
-Try running this command to enable extra repositories for RHEL 10:
-```bash
-sudo subscription-manager repos --enable codeready-builder-for-rhel-10-x86_64-rpms
-```
+[online documentation](https://github.com/lanoxx/tilda/blob/master/HACKING.md)
+
+<hr />
+
+> Note: I highly recommend following the instructions in [_enabling-extra-packages.md](_enabling-extra-packages.md) as they make getting dependencies easier.
+
+<hr />
 
 ## Dependencies (actual package names in `yum`)
 
@@ -51,5 +54,6 @@ sudo yum install git automake dh-autoreconf libconfuse-devel vte291-devel gtk3-d
 - `glib-devel`
 - `gettext-devel`
 
+<hr />
 
-
+See the [online documentation](https://github.com/lanoxx/tilda/blob/master/HACKING.md) for further instructions.
