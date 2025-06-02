@@ -1,2 +1,6 @@
-# Documentation on how to do stuff, like install your own version of Firefox from the source
-# [Link to how to do that](https://github.com/nicodoggy/nico-documentation/blob/main/firefox/firefox-nightly-install.ipynb)
+# nico-documentation
+
+> `nico-documentation` is documentation about installing Firefox from source, compiling other software from source, and doing stuff with raspberry pi's.
+
+<hr />
+`written by nico`
