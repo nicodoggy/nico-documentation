@@ -39,8 +39,12 @@ For your convenience, here's a list of the dependencies for Fedora as of May 30,
 - `python3-cairo`
 - `python3-dbus`
 - `python3-pip`
-- `keybinder3`
-- `libwnck`
+- `keybinder3`*
+- `libwnck`*
+
+```bash
+sudo yum install python3-devel python3-cairo python3-dbus python3-pip keybinder3 libwnck 
+```
 
 ###  Packages needed for making guake
 - `gettext`
@@ -48,47 +52,65 @@ For your convenience, here's a list of the dependencies for Fedora as of May 30,
 - `make`
 - `pandoc`
 
+```bash
+sudo yum install gettext gsettings-desktop-schemas make pandoc 
+```
+
 ### Packages needed for development
 - `dconf-editor`
-- `glade`
-- `poedit`
+- `glade`*
+- `poedit`*
 - `gnome-tweak-tool`
+
+```bash
+sudo yum install dconf-editor glade poedit gnome-tweak-tool
+```
 
 ### Optional packages for execution
 - `libutempter`
-- `numix-gtk-theme`
+- `numix-gtk-theme`*
 
-The following dependencies were not found on RHEL 10.0:
+
+```bash
+sudo yum install libutempter numix-gtk-theme 
+```
+
+> \* Not found on RHEL 10.0 (see section below)
+
+### The following dependencies were not found on RHEL 10.0:
 - `keybinder3`
 - `libwnck`
 - `glade`
 - `poedit`
-- `numix-gtk-theme`
+- `numix-gtk-theme`**
 
-You will need to install `keybinder-3.0` from source if you do not have it.
+> ** Not required by `guake`.
+ 
+ <hr />
 
-To install `keybinder-3.0` from source, you will need to install the following dependencies from your package manager:
-- `gnome-common`
-- `gtk-doc`
-- `gobject-introspection-devel`
-- `gtk3-devel`
-- `libappindicator-gtk3-devel`
+> If keybinder3 is not found on your package manager, you will need to [install `keybinder-3.0` from source](keybinder.md) if you do not have it already.
 
-Then, clone [https://github.com/kupferlauncher/keybinder](https://github.com/kupferlauncher/keybinder).
-Then, `cd` into `keybinder` and run this:
-```bash
-./autogen.sh --libdir /usr/local/lib64
+Then, try to run guake by typing "guake" into a terminal and pressing enter.
+
+If you get this message
+```
+[ERROR] missing mandatory dependency: Keybinder 3
+[ERROR] missing at least one system dependencies. You need to install additional packages for Guake to run
+[ERROR] On Debian/Ubuntu you need to install the following libraries:
+    sudo apt-get install -y --no-install-recommends \
+        gir1.2-keybinder-3.0 \
+        gir1.2-notify-0.7 \
+        gir1.2-vte-2.91 \
+        gir1.2-wnck-3.0 \
+        libkeybinder-3.0-0 \
+        libutempter0 \
+        python3 \
+        python3-dbus \
+        python3-gi \
+        python3-pip
 ```
 
-Then, run `make`:
-```bash
-make
-```
-
-Then, run `sudo make install`:
-```bash
-sudo make install
-```
+1. Make sure you installed keybinder from source.
 
 <hr />
 

@@ -1,5 +1,7 @@
 # `tilda` compile instructions
 
+> Note: this document is not complete with full installation instructions because `tilda` seems to not work on the Wayland window system, kind of like `yakuake`. If you want a dropdown terminal better suited for Wayland, try [guake](guake.md)
+
 [online documentation](https://github.com/lanoxx/tilda/blob/master/HACKING.md)
 
 <hr />

@@ -1,7 +1,5 @@
 # Enabling Extra Packages for `RHEL 10`
 
-> Because sometimes, compiling documentation from source just isn't that appealing.
-
 Run the following two commands to get extra repos! **Yay!!!**
 
 ```bash
